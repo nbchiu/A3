@@ -40,9 +40,9 @@ public class MovieCount extends Configured implements Tool{
 		int returnValue = job1.waitForCompletion(true) ? 0:1;
 
 		if (job1.isSuccessful()) { 
-			System.out.println("Job was successful");
+			System.out.println("Job1 was successful");
 		} else if(!job1.isSuccessful()) {
-			System.out.println("Job was not successful");
+			System.out.println("Job1 was not successful");
 		}
 		
 		//second job -- top 10  users that posted the most reviews 
@@ -63,9 +63,9 @@ public class MovieCount extends Configured implements Tool{
 		returnValue = job2.waitForCompletion(true) ? 0:1;
 
 		if (job2.isSuccessful()) { 
-			System.out.println("Job was successful");
+			System.out.println("Job2 was successful");
 		} else if(!job2.isSuccessful()) {
-			System.out.println("Job was not successful");
+			System.out.println("Job2 was not successful");
 		}
 		
 

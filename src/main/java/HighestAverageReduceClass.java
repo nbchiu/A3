@@ -23,6 +23,8 @@ public class HighestAverageReduceClass extends Reducer<Text, IntWritable, Text, 
 		//HashMap<Integer, Double> userNumOfRate = new HashMap<Integer, Double>(); //number of user rating 2
 		
 		while(valueIt.hasNext()){ //reading TrainingRatings
+			System.out.print(valueIt.next().get());
+			System.out.print(valueIt.next().get());
 			index = valueIt.next().get();
 			userId = valueIt.next().get();
 			rate = valueIt.next().get();
@@ -56,7 +58,7 @@ public class HighestAverageReduceClass extends Reducer<Text, IntWritable, Text, 
 		
 		sorted_Avg.putAll(avgRate);
 		//sorted_Num.putAll(userNumOfRate);
-
+		
 		context.write(key, new IntWritable());
 	}
 }

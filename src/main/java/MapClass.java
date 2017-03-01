@@ -15,10 +15,13 @@ public class MapClass extends Mapper<LongWritable, Text, Text, IntWritable>{
 
 		String line = value.toString();
 		StringTokenizer st = new StringTokenizer(line, " ");
+		
 
 		while(st.hasMoreTokens()){
-			word.set(st.nextToken(","));
-			context.write(word,one);
+			String ln = st.nextToken(",");
+			word.set(ln);
+			IntWritable out = new IntWritable(Integer.parseInt(ln));
+			context.write(word,out);
 		}
 	}
 } 
