@@ -1,3 +1,5 @@
+package com.CS499;
+
 import java.io.IOException;
 import java.util.Iterator;
 
@@ -11,7 +13,7 @@ public class ReduceClass extends Reduce{
 	protected void reduce(Text key, Iterable values, Context context) throws IOException, InterruptedException {
 
 		int sum = 0;
-		Iterator valuesIt = values.iterator();
+		Iterator<IntWritable> valuesIt = values.iterator();
 
 		while(valuesIt.hasNext()){
 			sum = sum + values.iterator();
